@@ -1,5 +1,10 @@
 # Day 2
 
+# Both parts
+# 0 lost
+# 3 draw
+# 6 win
+
 # Part 1
 # 1 for rock A X
 # 2 for paper B Y
@@ -11,20 +16,13 @@
 # Y - draw
 # Z - win
 
-# Both parts
-# 0 lost
-# 3 draw
-# 6 win
-
 filePath = '/Users/fruzki/Documents/stuff/AOC/2022/02/input.txt'
 data = open(filePath, 'r')
 
+# Part 2
 pointsTotal = 0
 for line in data.readlines():
     roundData = line.rstrip()
-
-
-    pointsTotal += 3 if roundData[0] == "A"
 
     if roundData[2] == "X":
         pointsTotal += 0
@@ -55,11 +53,13 @@ for line in data.readlines():
 print(pointsTotal)
 
 
-
-
-    '''if roundData[2] == "X":
+'''
+# Part 1
+pointsTotal = 0
+for line in data.readlines():
+    roundData = line.rstrip()
+    if roundData[2] == "X":
         pointsTotal += 1
-        pointsTotal += 3 if roundData[0] == "A" else 6
         if roundData[0] == "A":
             pointsTotal += 3
         elif roundData[0] == "B":
@@ -84,4 +84,5 @@ print(pointsTotal)
             pointsTotal += 6
         elif roundData[0] == "C":
             pointsTotal += 3
+print(pointsTotal)
 '''
